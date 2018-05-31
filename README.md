@@ -113,4 +113,4 @@ The MIT License (MIT)
 
 ## Notice
 
-- `AppCommander` and their developer(s) and contributors will not take any liability and responsibility for any of the development you do, actions or code or logic you write, results or issues or erros you may face, lost of data you may make by using `AppCommander` in any of your work which is for your personal or employers or clients. Meaning, if you use `AppCommander` classes(files), you're (and your team) is fully responsible.
+- `AppCommander` and their developer(s) and contributors will not take any liability and responsibility for any of the development you do, actions or code or logic you write, results or issues or erros you may face, lost of data you may make by using `AppCommander` in any of your work which is for your personal or employers or clients. Meaning, if you use `AppCommander` classes(files), you're (and your team members are) fully responsible.
