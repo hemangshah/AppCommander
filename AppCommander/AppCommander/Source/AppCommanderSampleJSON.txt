@@ -1,0 +1,13 @@
+{
+    "appCommand" : {
+      "afterSeconds" : 10,
+      "name" : "forceExit",
+      "priority" : 1,
+      "privateKey" : "gx3sKYD82dpx",
+      "forceExecute" : false,
+      "platform" : "ios",
+      "reExecute" : false,
+      "toDate" : 1609459200,
+      "version" : "1.0"
+    }
+}
