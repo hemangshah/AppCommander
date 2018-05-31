@@ -12,6 +12,7 @@
 5. [Credits](#credits)
 6. [Thanks](#thank-you)
 7. [License](#license)
+8. [Notice](#notice)
 
 ## Features
 
@@ -109,3 +110,7 @@ See the [contributions](https://github.com/hemangshah/AppCommander/blob/master/C
 The MIT License (MIT)
 
 > Read the [LICENSE](https://github.com/hemangshah/AppCommander/blob/master/LICENSE) file for details.
+
+## Notice
+
+- `AppCommander` and their developer(s) and contributors will not take any liability and responsibility for any of the development you do, actions or code or logic you write, results or issues or erros you may face, lost of data you may make by using `AppCommander` in any of your work which is for your personal or employers or clients. Meaning, if you use `AppCommander` classes(files), you're (and your team) is fully responsible.
