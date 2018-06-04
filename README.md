@@ -5,14 +5,34 @@
 ![Platform](https://img.shields.io/badge/Platforms-iOS-red.svg)
 ![Swift 4.x](https://img.shields.io/badge/Swift-4.x-blue.svg)
 
-1. [Features](#features)
-2. [Installation](#installation)
-3. [Usage](#usage)
-4. [ToDos](#todos)
-5. [Credits](#credits)
-6. [Thanks](#thank-you)
-7. [License](#license)
-8. [Notice](#notice)
+1. [Overview](#overview)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [ToDos](#todos)
+6. [Credits](#credits)
+7. [Thanks](#thank-you)
+8. [License](#license)
+9. [Notice](#notice)
+
+## Overview
+
+There are times when it will be require for you to let *all of your logged-in users will get logged out*, or maybe *presented with some view controller displaying new terms and conditions to use your app*, or maybe, you *want to show a message to your users (not via push notifications)*, or you simply *want to lock your app for a particular time*?
+
+There can be just too many cases which will be require you to do but the main question is how it's possible to an already released app? Yes, you can create your own APIs which will do such things for you. But what if you don't want to use your own APIs to take care about it, or you want those actions to get performed so quick that you can't depend on your own APIs.
+
+This is why I have written **AppCommander**. It will comminicate to your Firebase RealTime Database and will help you to perform an action as quickly as possible.
+
+**AppCommander** will only follow your instructions which you will give through various commands available and will only call the actions which you have written in advance before it will get released on the AppStore. Isn't it cool?
+
+What AppCommander needs you to do? 
+
+- Think about the possible actions you want to do.
+- Setup Firebase RealTime Database.
+- Setup your app so it can communicate with the Firebase. Read the installations. Points: 1...4
+- Setup AppCommander. Point: 5
+- Read the Usage to see the usage of the AppCommander. Points: 1...4
+- Write the actions which you want to perform by the AppCommander.
 
 ## Features
 
