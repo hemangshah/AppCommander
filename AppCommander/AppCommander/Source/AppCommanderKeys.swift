@@ -25,9 +25,9 @@ public struct AppCommanderKeys {
         public static var kIgnoreMe = "ignoreMe"
         public static var kAfterSeconds = "afterSeconds"
         public static var kReExecute = "reExecute"
-        
-        //Will be added in future releases.
         public static var kAlert = "alert"
+        
+        //Will be added in future releases.        
         public static var kOnDevices = "onDevices"
         public static var kAppLanguage = "appLanguage"
         public static var kRegion = "region"

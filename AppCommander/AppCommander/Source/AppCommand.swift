@@ -40,6 +40,9 @@ public class AppCommand {
     ///It will reExecute a command with the same private key. `forceExecute` will be ignored if same private key used for multiple commands meaning a command will not execute with the same private key and has not given `reExecute` key.
     private(set) internal var reExecute: Bool = false
     
+    ///You can show an alert additionaly with the command you will execute.
+    private(set) internal var alert: String? = nil
+    
     //MARK: Init
     public init(withCommand commandResult: [String: Any]) {
         if let commandName = commandResult[AppCommanderKeys.commandKeys.kCommandName] as? String {
@@ -71,6 +74,9 @@ public class AppCommand {
         }
         if let commandReExecute = commandResult[AppCommanderKeys.commandKeys.kReExecute] as? Bool {
             self.reExecute = commandReExecute
+        }
+        if let commandAlert = commandResult[AppCommanderKeys.commandKeys.kAlert] as? String {
+            self.alert = commandAlert
         }
     }
 }
