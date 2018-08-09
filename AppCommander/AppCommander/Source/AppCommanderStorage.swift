@@ -13,7 +13,7 @@ public class AppCommanderStorage {
     public static let storage = AppCommanderStorage()
     
     fileprivate var storageDefaults = UserDefaults.standard
-    fileprivate var storeKey = AppCommanderKeys.stroageKeys.kStoreKey
+    fileprivate var storeKey = StroageKeys.kStoreKey
     
     //MARK: Save
     internal func save(_ command: AppCommand) {
@@ -24,6 +24,7 @@ public class AppCommanderStorage {
                 existingKeys.append(commandPrivateKey)
             }
             self.storageDefaults.set(existingKeys, forKey: storeKey)
+            self.storageDefaults.synchronize()
         }
     }
     

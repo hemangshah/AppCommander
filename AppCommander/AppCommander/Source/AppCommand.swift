@@ -45,37 +45,37 @@ public class AppCommand {
     
     //MARK: Init
     public init(withCommand commandResult: [String: Any]) {
-        if let commandName = commandResult[AppCommanderKeys.commandKeys.kCommandName] as? String {
+        if let commandName = commandResult[CommandKeys.kCommandName] as? String {
             self.name = commandName
         }
-        if let commandPriority = commandResult[AppCommanderKeys.commandKeys.kCommandPriority] as? Int {
+        if let commandPriority = commandResult[CommandKeys.kCommandPriority] as? Int {
             self.priority = commandPriority
         }
-        if let commandPrivateKey = commandResult[AppCommanderKeys.commandKeys.kCommandPrivateKey] as? String {
+        if let commandPrivateKey = commandResult[CommandKeys.kCommandPrivateKey] as? String {
             self.privateKey = commandPrivateKey
         }
-        if let commandForceExecute = commandResult[AppCommanderKeys.commandKeys.kForceExecute] as? Bool {
+        if let commandForceExecute = commandResult[CommandKeys.kForceExecute] as? Bool {
             self.forceExecute = commandForceExecute
         }
-        if let commandPlatform = commandResult[AppCommanderKeys.commandKeys.kPlatform] as? String {
+        if let commandPlatform = commandResult[CommandKeys.kPlatform] as? String {
             self.platform = commandPlatform
         }
-        if let commandVersion = commandResult[AppCommanderKeys.commandKeys.kVersion] as? String {
+        if let commandVersion = commandResult[CommandKeys.kVersion] as? String {
             self.version  = commandVersion
         }
-        if let commandToDate = commandResult[AppCommanderKeys.commandKeys.kToDate] as? TimeInterval {
+        if let commandToDate = commandResult[CommandKeys.kToDate] as? TimeInterval {
             self.toDate = commandToDate
         }
-        if let commandIgnoreMe = commandResult[AppCommanderKeys.commandKeys.kIgnoreMe] as? Bool {
+        if let commandIgnoreMe = commandResult[CommandKeys.kIgnoreMe] as? Bool {
             self.ignoreMe = commandIgnoreMe
         }
-        if let commandAfterSeconds = commandResult[AppCommanderKeys.commandKeys.kAfterSeconds] as? Int {
+        if let commandAfterSeconds = commandResult[CommandKeys.kAfterSeconds] as? Int {
             self.afterSeconds = commandAfterSeconds
         }
-        if let commandReExecute = commandResult[AppCommanderKeys.commandKeys.kReExecute] as? Bool {
+        if let commandReExecute = commandResult[CommandKeys.kReExecute] as? Bool {
             self.reExecute = commandReExecute
         }
-        if let commandAlert = commandResult[AppCommanderKeys.commandKeys.kAlert] as? String {
+        if let commandAlert = commandResult[CommandKeys.kAlert] as? String {
             self.alert = commandAlert
         }
     }

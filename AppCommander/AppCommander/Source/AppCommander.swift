@@ -104,7 +104,7 @@ public class AppCommander {
     fileprivate func read() {
         self.appCommanderDBReference.observe(.value, with: { (snapshot) in
             if let value = snapshot.value as? NSDictionary {
-                if let appCommand = value[AppCommanderKeys.command.kAppCommand] as? [String : Any] {
+                if let appCommand = value[ActualCommand.kAppCommand] as? [String : Any] {
                     let command = AppCommand.init(withCommand: appCommand)
                     if self.validate(command) {
                         self.execution(command)

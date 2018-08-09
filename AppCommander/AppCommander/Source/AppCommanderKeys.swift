@@ -8,13 +8,14 @@
 
 import Foundation
 
-public struct AppCommanderKeys {
-    
-    public struct command {
+public extension AppCommander {
+    public struct ActualCommand {
         public static var kAppCommand = "appCommand"
     }
-    
-    public struct commandKeys {
+}
+
+public extension AppCommand {
+    public struct CommandKeys {
         public static var kCommandName = "name"
         public static var kCommandPriority = "priority"
         public static var kCommandPrivateKey = "privateKey"
@@ -27,14 +28,16 @@ public struct AppCommanderKeys {
         public static var kReExecute = "reExecute"
         public static var kAlert = "alert"
         
-        //Will be added in future releases.        
+        //Will be added in future releases.
         public static var kOnDevices = "onDevices"
         public static var kAppLanguage = "appLanguage"
         public static var kRegion = "region"
         public static var kBatteryLevel = "batteryLevel"
     }
-    
-    public struct stroageKeys {
+}
+
+public extension AppCommanderStorage {
+    public struct StroageKeys {
         public static var kStoreKey = "AppCommanderStore"
     }
 }
