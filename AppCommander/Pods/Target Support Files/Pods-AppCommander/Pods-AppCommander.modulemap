@@ -1,0 +1,6 @@
+framework module Pods_AppCommander {
+  umbrella header "Pods-AppCommander-umbrella.h"
+
+  export *
+  module * { export * }
+}

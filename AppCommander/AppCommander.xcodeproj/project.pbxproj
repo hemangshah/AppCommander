@@ -83,11 +83,11 @@
 		6B2C77E920BADA6E00162E11 /* AppCommander */ = {
 			isa = PBXGroup;
 			children = (
+				6BE8B84B211C239F00C132F7 /* Delegate */,
+				6BE8B84A211C238600C132F7 /* Views */,
+				6BE8B849211C237E00C132F7 /* VC */,
 				6B2C77FC20BADA7600162E11 /* Source */,
 				6B2C780320BADDE100162E11 /* GoogleService-Info.plist */,
-				6B2C77EA20BADA6E00162E11 /* AppDelegate.swift */,
-				6B2C77EC20BADA6E00162E11 /* ViewController.swift */,
-				6B2C77EE20BADA6E00162E11 /* Main.storyboard */,
 				6B2C77F120BADA6E00162E11 /* Assets.xcassets */,
 				6B2C77F320BADA6E00162E11 /* LaunchScreen.storyboard */,
 				6B2C77F620BADA6E00162E11 /* Info.plist */,
@@ -106,6 +106,30 @@
 				6BF4DE0020BFD6C500C6CD2A /* AppCommanderSampleJSON.txt */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		6BE8B849211C237E00C132F7 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				6B2C77EC20BADA6E00162E11 /* ViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		6BE8B84A211C238600C132F7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6B2C77EE20BADA6E00162E11 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6BE8B84B211C239F00C132F7 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				6B2C77EA20BADA6E00162E11 /* AppDelegate.swift */,
+			);
+			path = Delegate;
 			sourceTree = "<group>";
 		};
 		73DB7394412E5975A00CFF7F /* Pods */ = {
