@@ -9,35 +9,47 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    fileprivate func doActionsWithCommand(_ command: AppCommand) {
+        //Check if we have a command name. And command name isn't empty.
+        if let commandName = command.name, !commandName.isEmpty {
+            //Compare the commands.
+            if commandName == "forceExit" {
+                //If afterSeconds available, execute the command after this time.
+                if let commandAfterSeconds = command.afterSeconds {
+                    let afterSeconds = Double(commandAfterSeconds)
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + afterSeconds, execute: {
+                        self.forceExit()
+                    })
+                } else {
+                    //Else, execute the command now.
+                    self.forceExit()
+                }
+                
+            } else if commandName == "showAlert" {
+                self.showAlert()
+            }
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Execute the command which we read from the Firebase Database
         AppCommander.commander.execution = { command in
-            //Check if we have a command name.
-            let commandName = command.name ?? ""
-            //If command name isn't empty.
-            if !commandName.isEmpty {
-                //Compare the command.
-                if commandName == "forceExit" {
-                    //If afterSeconds available, execute the command after this time.
-                    if let commandAfterSeconds = command.afterSeconds {
-                        let afterSeconds = Double(commandAfterSeconds)
-                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + afterSeconds, execute: {
-                            self.forceExit()
-                        })
-                    } else {
-                        //Else, execute the command now.
-                        self.forceExit()
-                    }
-                }
-            }
+            self.doActionsWithCommand(command)
         }
     }
     
-    //MARK: Commands
+    //MARK: Command Actions
     fileprivate func forceExit() {
         exit(1)
+    }
+    
+    fileprivate func showAlert() {
+        let alertcontroller = UIAlertController.init(title: "Title", message: "Message", preferredStyle: .alert)
+        let actionCancel = UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil)
+        alertcontroller.addAction(actionCancel)
+        self.present(alertcontroller, animated: true, completion: nil)
     }
 }
