@@ -27,7 +27,9 @@ class ViewController: UIViewController {
                 }
                 
             } else if commandName == "showAlert" {
-                self.showAlert()
+                if let alert = command.alert {
+                    self.showAlertWithMessage(alert: alert)
+                }
             }
         }
     }
@@ -46,8 +48,8 @@ class ViewController: UIViewController {
         exit(1)
     }
     
-    fileprivate func showAlert() {
-        let alertcontroller = UIAlertController.init(title: "Title", message: "Message", preferredStyle: .alert)
+    fileprivate func showAlertWithMessage(alert: String) {
+        let alertcontroller = UIAlertController.init(title: alert, message: nil, preferredStyle: .alert)
         let actionCancel = UIAlertAction.init(title: "Cancel", style: .cancel, handler: nil)
         alertcontroller.addAction(actionCancel)
         self.present(alertcontroller, animated: true, completion: nil)
